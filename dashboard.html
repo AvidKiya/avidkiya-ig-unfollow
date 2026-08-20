@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark" data-theme-setting="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IG TOOLs - AvidKiya</title>
+  <link rel="icon" type="image/png" href="assets/icons/icon-128.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================= inline SVG icon sprite ======================= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-grid" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/></symbol>
+      <symbol id="i-pulse" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 12h-4l-3 8L9 4l-3 8H2"/></symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+      <symbol id="i-scan" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M21 21l-4.35-4.35"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4h4v16H6zM14 4h4v16h-4z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4l14 8-14 8z"/></symbol>
+      <symbol id="i-stop" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2" fill="currentColor"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 21h8M12 17v4"/></symbol>
+      <symbol id="i-warn" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 9v4M12 17h.01"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M20 6L9 17l-5-5"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M18 6L6 18M6 6l12 12"/></symbol>
+      <symbol id="i-minus-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 12h8"/></symbol>
+      <symbol id="i-filter" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M22 3H2l8 9.46V19l4 2v-8.54z"/></symbol>
+      <symbol id="i-sort" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 5h10M11 9h7M11 13h4M3 17l3 3 3-3M6 18V4"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 16v-4M12 8h.01"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+      <symbol id="i-brand-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.9 2H22l-6.77 7.74L23.2 22h-6.23l-4.88-6.38L6.5 22H3.35l7.24-8.28L2.8 2h6.39l4.41 5.83L18.9 2zm-1.1 18.1h1.72L7.7 3.8H5.85l11.95 16.3z"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
+      <symbol id="i-move" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 3L4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></symbol>
+      <symbol id="i-megaphone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 11l18-7v16l-18-7v-2z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></symbol>
+      <symbol id="i-lightbulb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"/></symbol>
+      <symbol id="i-user-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM17 8l2 2 4-4"/></symbol>
+      <symbol id="i-user-minus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M8.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 8h-6"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="app">
+
+    <!-- ======================= top bar ======================= -->
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/icons/icon-128.png" alt="IG Unfollow - AvidKiya logo" width="46" height="46" />
+        <div>
+          <h1>IG TOOLs - AvidKiya</h1>
+          <p class="tagline" data-i18n="app.subtitle"></p>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <select id="langSelect" class="input" data-i18n-aria="lang.label">
+        <option value="fa">فارسی</option>
+        <option value="en">English</option>
+      </select>
+      <button id="themeBtn" class="btn icon-only" data-i18n-aria="theme.toggle" data-i18n-title="theme.toggle">
+        <svg class="icon" id="themeIcon"><use href="#i-moon"></use></svg>
+      </button>
+    </header>
+
+    <!-- ======================= tabs ======================= -->
+    <nav class="tabs" role="tablist" aria-label="Main">
+      <button class="tab-btn" role="tab" id="tab-dashboard" aria-selected="true" aria-controls="panel-dashboard" data-tab="dashboard">
+        <svg class="icon"><use href="#i-grid"></use></svg><span data-i18n="nav.dashboard"></span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-nonfollowers" aria-selected="false" aria-controls="panel-nonfollowers" data-tab="nonfollowers" tabindex="-1">
+        <svg class="icon"><use href="#i-user-minus"></use></svg><span data-i18n="nav.nonfollowers"></span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-protected" aria-selected="false" aria-controls="panel-protected" data-tab="protected" tabindex="-1">
+        <svg class="icon"><use href="#i-shield"></use></svg><span data-i18n="nav.protected"></span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-activity" aria-selected="false" aria-controls="panel-activity" data-tab="activity" tabindex="-1">
+        <svg class="icon"><use href="#i-pulse"></use></svg><span data-i18n="nav.activity"></span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-marketing" aria-selected="false" aria-controls="panel-marketing" data-tab="marketing" tabindex="-1">
+        <svg class="icon"><use href="#i-megaphone"></use></svg><span data-i18n="nav.marketing"></span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-coach" aria-selected="false" aria-controls="panel-coach" data-tab="coach" tabindex="-1">
+        <svg class="icon"><use href="#i-target"></use></svg><span data-i18n="nav.coach"></span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-settings" aria-selected="false" aria-controls="panel-settings" data-tab="settings" tabindex="-1">
+        <svg class="icon"><use href="#i-gear"></use></svg><span data-i18n="nav.settings"></span>
+      </button>
+      <button class="tab-btn" role="tab" id="tab-support" aria-selected="false" aria-controls="panel-support" data-tab="support" tabindex="-1">
+        <svg class="icon"><use href="#i-heart"></use></svg><span data-i18n="nav.support"></span>
+      </button>
+    </nav>
+
+    <main>
+      <!-- ======================= DASHBOARD ======================= -->
+      <section class="tab-panel active" id="panel-dashboard" role="tabpanel" aria-labelledby="tab-dashboard" tabindex="0">
+
+        <div id="resumeBanner" class="resume-banner" hidden>
+          <div class="rb-text">
+            <b data-i18n="queue.resumeTitle"></b>
+            <div id="resumeText" class="muted"></div>
+          </div>
+          <div class="btnrow">
+            <button id="resumeBtn" class="btn primary"><svg class="icon"><use href="#i-play"></use></svg><span data-i18n="queue.resume"></span></button>
+            <button id="resumeClearBtn" class="btn danger"><svg class="icon"><use href="#i-trash"></use></svg><span data-i18n="queue.clear"></span></button>
+          </div>
+        </div>
+
+        <div id="loginWarn" class="note warn" hidden>
+          <svg class="icon"><use href="#i-warn"></use></svg>
+          <span data-i18n="dashboard.loginRequired"></span>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" data-i18n="dashboard.openInstagram"></a>
+        </div>
+
+        <!-- کارت لاگین مخصوص نسخهٔ وب لوکال -->
+        <div id="webLoginBar" class="card" hidden style="margin-bottom:16px">
+          <h3 class="section-title" style="margin-top:0"><svg class="icon"><use href="#i-lock"></use></svg><span data-i18n="web.loginTitle"></span></h3>
+          <p class="muted" style="font-size:.82rem;margin-top:-4px" data-i18n="web.loginDesc"></p>
+          <form id="wlForm" class="toolbar" style="margin-bottom:0">
+            <div class="field"><label for="wlUser" data-i18n="web.user"></label><input id="wlUser" class="input mono" style="direction:ltr" autocomplete="username" /></div>
+            <div class="field"><label for="wlPass" data-i18n="web.pass"></label><input id="wlPass" class="input mono" style="direction:ltr" type="password" autocomplete="current-password" /></div>
+            <div class="field" id="wlCodeWrap" hidden><label for="wlCode" data-i18n="web.code2fa"></label><input id="wlCode" class="input mono" style="direction:ltr" inputmode="numeric" autocomplete="one-time-code" /></div>
+            <button id="wlLogin" type="submit" class="btn primary"><svg class="icon"><use href="#i-check"></use></svg><span id="wlLoginLabel" data-i18n="web.loginBtn"></span></button>
+            <button id="wlLogout" type="button" class="btn danger sm" hidden><span data-i18n="web.logoutBtn"></span></button>
+          </form>
+          <p class="muted" id="wlStatus" style="margin:8px 0 0;font-size:.8rem"></p>
+        </div>
+
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-users"></use></svg><span data-i18n="dashboard.statFollowing"></span></div><div class="stat-value" id="stFollowing">—</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-user-check"></use></svg><span data-i18n="dashboard.statFollowers"></span></div><div class="stat-value" id="stFollowers">—</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-user-minus"></use></svg><span data-i18n="dashboard.statNonFollowers"></span></div><div class="stat-value accent" id="stNonFollowers">—</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-shield"></use></svg><span data-i18n="dashboard.statProtected"></span></div><div class="stat-value" id="stProtected">—</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-minus-circle"></use></svg><span data-i18n="dashboard.statToday"></span></div><div class="stat-value" id="stToday">—</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-clock"></use></svg><span data-i18n="dashboard.statLastScan"></span></div><div class="stat-hint" id="stLastScanTime" data-i18n="dashboard.neverScanned"></div></div>
+        </div>
+
+        <div class="card" id="diffCard" hidden>
+          <h3><svg class="icon"><use href="#i-pulse"></use></svg> <span data-i18n="common.fromLastScan"></span></h3>
+          <div class="diff-row">
+            <span class="diff-chip"><b id="diffNew">0</b><span data-i18n="dashboard.diffNewNonFollowers"></span></span>
+            <span class="diff-chip"><b id="diffNewFollowers">0</b><span data-i18n="dashboard.diffNewFollowers"></span></span>
+            <span class="diff-chip"><b id="diffRemoved">0</b><span data-i18n="dashboard.diffRemoved"></span></span>
+          </div>
+          <p class="muted" style="font-size:.78rem;margin:10px 0 0" data-i18n="dashboard.removedNote"></p>
+        </div>
+
+        <div style="margin-top:16px" class="btnrow">
+          <button id="scanBtn" class="btn primary"><svg class="icon"><use href="#i-scan"></use></svg><span id="scanBtnLabel" data-i18n="dashboard.scanBtn"></span></button>
+        </div>
+
+        <!-- live scan progress -->
+        <div id="scanPanel" class="card scan-panel" hidden>
+          <h3 data-i18n="dashboard.progress.title"></h3>
+          <div class="stepper" role="list">
+            <span class="step" id="stepFollowing" role="listitem"><i class="dot"></i><span data-i18n="dashboard.progress.stepFollowing"></span></span>
+            <span class="step" id="stepFollowers" role="listitem"><i class="dot"></i><span data-i18n="dashboard.progress.stepFollowers"></span></span>
+            <span class="step" id="stepComparing" role="listitem"><i class="dot"></i><span data-i18n="dashboard.progress.stepComparing"></span></span>
+          </div>
+          <div class="progress" id="scanProgress"><i></i></div>
+          <div class="scan-counters">
+            <div class="sc"><div class="k" data-i18n="dashboard.progress.pages"></div><div class="v" id="cPages">0</div></div>
+            <div class="sc"><div class="k" data-i18n="dashboard.progress.followingFetched"></div><div class="v" id="cFollowing">0</div></div>
+            <div class="sc"><div class="k" data-i18n="dashboard.progress.followersFetched"></div><div class="v" id="cFollowers">0</div></div>
+            <div class="sc"><div class="k" data-i18n="dashboard.progress.tempNonFollowers"></div><div class="v" id="cTempNF">0</div></div>
+            <div class="sc"><div class="k" data-i18n="dashboard.progress.elapsed"></div><div class="v" id="cElapsed">0s</div></div>
+          </div>
+          <div class="muted" style="margin-top:8px;font-size:.82rem"><span data-i18n="dashboard.progress.livePreview"></span> · <span id="scanStatusMsg"></span></div>
+          <div class="live-preview" id="livePreview"></div>
+          <div class="btnrow" style="margin-top:14px">
+            <button id="cancelScanBtn" class="btn danger"><svg class="icon"><use href="#i-stop"></use></svg><span data-i18n="dashboard.progress.cancel"></span></button>
+          </div>
+        </div>
+
+        <!-- queue panel -->
+        <div id="queuePanel" class="queue-panel" hidden>
+          <h3 class="section-title" style="margin-top:0"><svg class="icon"><use href="#i-pulse"></use></svg><span data-i18n="queue.progress"></span></h3>
+          <div class="progress"><i id="qProgressBar"></i></div>
+          <div class="queue-grid">
+            <div class="qg"><div class="k" data-i18n="queue.current"></div><div class="v mono" id="qCurrent">—</div></div>
+            <div class="qg"><div class="k" data-i18n="queue.remaining"></div><div class="v" id="qRemaining">0</div></div>
+            <div class="qg"><div class="k" data-i18n="queue.eta"></div><div class="v" id="qEta">—</div></div>
+            <div class="qg"><div class="k" data-i18n="queue.lastError"></div><div class="v" id="qLastError" style="font-size:.78rem;color:var(--danger)">—</div></div>
+          </div>
+          <div id="qBlockedHint" class="note warn" hidden></div>
+          <div class="btnrow">
+            <span class="badge green" id="qStatusBadge">—</span>
+            <div class="vr"></div>
+            <button id="qPauseBtn" class="btn sm"><svg class="icon"><use href="#i-pause"></use></svg><span data-i18n="queue.pause"></span></button>
+            <button id="qResumeBtn" class="btn sm primary" hidden><svg class="icon"><use href="#i-play"></use></svg><span data-i18n="queue.resume"></span></button>
+            <button id="qStopBtn" class="btn sm danger"><svg class="icon"><use href="#i-stop"></use></svg><span data-i18n="queue.stop"></span></button>
+            <button id="qClearBtn" class="btn sm ghost"><svg class="icon"><use href="#i-trash"></use></svg><span data-i18n="queue.clear"></span></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================= NON-FOLLOWERS ======================= -->
+      <section class="tab-panel" id="panel-nonfollowers" role="tabpanel" aria-labelledby="tab-nonfollowers" tabindex="0" hidden>
+        <div id="nfNeedScan" class="note" hidden>
+          <svg class="icon"><use href="#i-info"></use></svg> <span data-i18n="nf.needScan"></span>
+        </div>
+
+        <div class="note muted" style="border-style:solid">
+          <svg class="icon"><use href="#i-info"></use></svg> <span data-i18n="nf.noBioDataNote"></span>
+        </div>
+
+        <div class="toolbar" aria-label="filters">
+          <div class="field grow">
+            <label for="fSearch"><svg class="icon"><use href="#i-search"></use></svg> <span data-i18n="nf.filters.searchPh"></span></label>
+            <input id="fSearch" type="search" class="input" data-i18n-placeholder="nf.filters.searchPh" />
+          </div>
+          <div class="field">
+            <label for="fType" data-i18n="nf.filters.accountType"></label>
+            <select id="fType" class="input">
+              <option value="any" data-i18n="nf.filters.optAny"></option>
+              <option value="private" data-i18n="common.private"></option>
+              <option value="public" data-i18n="common.public"></option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fBio" data-i18n="nf.filters.bioFilter"></label>
+            <select id="fBio" class="input">
+              <option value="any" data-i18n="nf.filters.optAny"></option>
+              <option value="has" data-i18n="nf.hasBio"></option>
+              <option value="none" data-i18n="nf.noBio"></option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fPic" data-i18n="nf.filters.picFilter"></label>
+            <select id="fPic" class="input">
+              <option value="any" data-i18n="nf.filters.optAny"></option>
+              <option value="has" data-i18n="nf.filters.hasPic"></option>
+              <option value="none" data-i18n="nf.filters.noPic"></option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fProt" data-i18n="nf.filters.protection"></label>
+            <select id="fProt" class="input">
+              <option value="any" data-i18n="nf.filters.optAny"></option>
+              <option value="starred" data-i18n="nf.filters.onlyStarred"></option>
+              <option value="never" data-i18n="nf.filters.onlyProtected"></option>
+            </select>
+          </div>
+          <div class="field"><label for="fMinFers" data-i18n="nf.filters.minFollowers"></label><input id="fMinFers" type="number" min="0" class="input" /></div>
+          <div class="field"><label for="fMaxFers" data-i18n="nf.filters.maxFollowers"></label><input id="fMaxFers" type="number" min="0" class="input" /></div>
+          <div class="field"><label for="fMinFing" data-i18n="nf.filters.minFollowing"></label><input id="fMinFing" type="number" min="0" class="input" /></div>
+          <div class="field"><label for="fMaxFing" data-i18n="nf.filters.maxFollowing"></label><input id="fMaxFing" type="number" min="0" class="input" /></div>
+          <div class="field">
+            <label for="fSort"><svg class="icon"><use href="#i-sort"></use></svg> <span data-i18n="nf.filters.sort"></span></label>
+            <select id="fSort" class="input">
+              <option value="username" data-i18n="nf.filters.sortUsername"></option>
+              <option value="followers" data-i18n="nf.filters.sortFollowers"></option>
+              <option value="following" data-i18n="nf.filters.sortFollowing"></option>
+              <option value="verified" data-i18n="nf.filters.sortVerified"></option>
+            </select>
+          </div>
+          <button id="fClear" class="btn ghost sm"><svg class="icon"><use href="#i-x"></use></svg><span data-i18n="nf.filters.clear"></span></button>
+        </div>
+
+        <div class="chips" id="fBuckets" role="group" aria-label="followers buckets">
+          <button class="chip" data-bucket="lt1k" aria-pressed="false"></button>
+          <button class="chip" data-bucket="b1k2k" aria-pressed="false"></button>
+          <button class="chip" data-bucket="b2k3k" aria-pressed="false"></button>
+          <button class="chip" data-bucket="b3k5k" aria-pressed="false"></button>
+          <button class="chip" data-bucket="gte5k" aria-pressed="false"></button>
+        </div>
+
+        <div class="card">
+          <h3><svg class="icon"><use href="#i-check"></use></svg> <span data-i18n="nf.smart.title"></span></h3>
+          <div class="btnrow">
+            <button class="btn sm" id="sAll" data-i18n="nf.smart.all"></button>
+            <button class="btn sm" id="sNone" data-i18n="nf.smart.none"></button>
+            <button class="btn sm" id="sLt1k" data-i18n="nf.smart.lt1k"></button>
+            <button class="btn sm" id="sLt3k" data-i18n="nf.smart.lt3k"></button>
+            <button class="btn sm" id="sPriv" data-i18n="nf.smart.private"></button>
+            <button class="btn sm" id="sNoBio" data-i18n="nf.smart.noBio"></button>
+            <button class="btn sm" id="sExStar" data-i18n="nf.smart.exceptStarred"></button>
+            <button class="btn sm" id="sExNever" data-i18n="nf.smart.exceptNever"></button>
+          </div>
+          <p class="muted" style="font-size:.78rem;margin:8px 0 0" data-i18n="nf.smart.neverHint"></p>
+        </div>
+
+        <h3 class="section-title"><svg class="icon"><use href="#i-user-minus"></use></svg><span data-i18n="nf.title"></span> <span class="badge green" id="nfCount">0</span></h3>
+
+        <div class="userlist" id="nfList"></div>
+        <div id="nfSentinel"></div>
+        <div id="nfEmpty" class="empty-state" hidden>
+          <svg class="icon"><use href="#i-users"></use></svg>
+          <span data-i18n="nf.noResults"></span>
+        </div>
+
+        <div class="actions-bar" id="nfActions">
+          <span data-i18n="nf.selected" id="selCount">0 انتخاب شده</span>
+          <div class="vr"></div>
+          <button id="startUnfollowBtn" class="btn primary"><svg class="icon"><use href="#i-minus-circle"></use></svg><span id="startUnfollowLabel">—</span></button>
+          <button id="selClearBtn" class="btn ghost sm" data-i18n="nf.smart.none"></button>
+        </div>
+      </section>
+
+      <!-- ======================= PROTECTED ======================= -->
+      <section class="tab-panel" id="panel-protected" role="tabpanel" aria-labelledby="tab-protected" tabindex="0" hidden>
+        <div class="note">
+          <svg class="icon"><use href="#i-shield"></use></svg> <span data-i18n="protected.neverForever"></span>
+        </div>
+
+        <div class="chips" role="tablist" aria-label="protected lists">
+          <button class="chip" id="pTabFav" aria-pressed="true"><svg class="icon"><use href="#i-star"></use></svg> <span data-i18n="protected.favTab"></span> <span class="badge" id="pFavCount">0</span></button>
+          <button class="chip" id="pTabNever" aria-pressed="false"><svg class="icon"><use href="#i-lock"></use></svg> <span data-i18n="protected.neverTab"></span> <span class="badge amber" id="pNeverCount">0</span></button>
+        </div>
+
+        <div class="toolbar">
+          <div class="field grow">
+            <label for="pSearch"><svg class="icon"><use href="#i-search"></use></svg></label>
+            <input id="pSearch" type="search" class="input" data-i18n-placeholder="protected.searchPh" />
+          </div>
+          <button id="pExportCsv" class="btn sm"><svg class="icon"><use href="#i-download"></use></svg><span data-i18n="protected.exportCsv"></span></button>
+          <button id="pExportJson" class="btn sm"><svg class="icon"><use href="#i-download"></use></svg><span data-i18n="protected.exportJson"></span></button>
+          <button id="pImportJson" class="btn sm"><svg class="icon"><use href="#i-upload"></use></svg><span data-i18n="protected.import"></span></button>
+        </div>
+
+        <div id="pInvalidWrap" class="note danger" hidden>
+          <b data-i18n="protected.importInvalidList"></b>
+          <div id="pInvalidList" class="mono" style="max-height:120px;overflow:auto;font-size:.78rem"></div>
+        </div>
+
+        <div class="userlist" id="pList"></div>
+        <div id="pEmpty" class="empty-state" hidden>
+          <svg class="icon"><use href="#i-shield"></use></svg>
+          <span id="pEmptyText"></span>
+        </div>
+      </section>
+
+      <!-- ======================= ACTIVITY ======================= -->
+      <section class="tab-panel" id="panel-activity" role="tabpanel" aria-labelledby="tab-activity" tabindex="0" hidden>
+
+        <div class="chart-box">
+          <h3 class="section-title" style="margin-top:0"><svg class="icon"><use href="#i-pulse"></use></svg><span data-i18n="activity.chartTitle"></span></h3>
+          <svg id="nfChart" role="img" aria-label="chart" viewBox="0 0 640 190" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+
+        <div class="diff-row" style="margin-top:14px">
+          <div class="card" style="flex:1;min-width:240px">
+            <h3><span data-i18n="activity.addedTitle"></span> <span class="badge green" id="addedCount">0</span></h3>
+            <div class="kv" id="diffDetailAdded" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+          </div>
+          <div class="card" style="flex:1;min-width:240px">
+            <h3><span data-i18n="activity.removedTitle"></span> <span class="badge red" id="removedCount">0</span></h3>
+            <div class="kv" id="diffDetailRemoved" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+          </div>
+        </div>
+
+        <h3 class="section-title"><svg class="icon"><use href="#i-clock"></use></svg><span data-i18n="activity.scansTitle"></span>
+          <span style="flex:1"></span>
+          <button id="scansExportCsv" class="btn sm"><svg class="icon"><use href="#i-download"></use></svg><span data-i18n="common.exportCsv"></span></button>
+          <button id="scansExportJson" class="btn sm"><svg class="icon"><use href="#i-download"></use></svg><span data-i18n="common.exportJson"></span></button>
+        </h3>
+        <div class="tbl-wrap">
+          <table class="tbl" id="scansTable">
+            <thead><tr>
+              <th data-i18n="activity.thDate"></th>
+              <th data-i18n="activity.thFollowing"></th>
+              <th data-i18n="activity.thFollowers"></th>
+              <th data-i18n="activity.thNonFollowers"></th>
+              <th data-i18n="activity.thDiff"></th>
+            </tr></thead>
+            <tbody id="scansTbody"></tbody>
+          </table>
+        </div>
+        <div id="scansEmpty" class="empty-state" hidden><svg class="icon"><use href="#i-clock"></use></svg><span data-i18n="activity.noScans"></span></div>
+
+        <h3 class="section-title"><svg class="icon"><use href="#i-minus-circle"></use></svg><span data-i18n="activity.unfHistoryTitle"></span>
+          <span style="flex:1"></span>
+          <select id="hFilter" class="input">
+            <option value="all" data-i18n="activity.filterAll"></option>
+            <option value="ok" data-i18n="activity.filterOk"></option>
+            <option value="fail" data-i18n="activity.filterFail"></option>
+          </select>
+          <button id="hExportCsv" class="btn sm"><svg class="icon"><use href="#i-download"></use></svg><span data-i18n="common.exportCsv"></span></button>
+          <button id="hExportJson" class="btn sm"><svg class="icon"><use href="#i-download"></use></svg><span data-i18n="common.exportJson"></span></button>
+        </h3>
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <thead><tr>
+              <th data-i18n="activity.thUser"></th>
+              <th data-i18n="activity.thTime"></th>
+              <th data-i18n="activity.thResult"></th>
+              <th data-i18n="activity.thMsg"></th>
+            </tr></thead>
+            <tbody id="histTbody"></tbody>
+          </table>
+        </div>
+        <div id="histEmpty" class="empty-state" hidden><svg class="icon"><use href="#i-minus-circle"></use></svg><span data-i18n="activity.noHistory"></span></div>
+      </section>
+
+      <!-- ======================= COMMENT MARKETING ======================= -->
+      <section class="tab-panel" id="panel-marketing" role="tabpanel" aria-labelledby="tab-marketing" tabindex="0" hidden>
+        <div class="note">
+          <svg class="icon"><use href="#i-shield"></use></svg> <span data-i18n="mkt.desc"></span>
+        </div>
+        <div class="note muted" style="border-style:solid">
+          <svg class="icon"><use href="#i-clock"></use></svg> <span data-i18n="mkt.pollNote"></span>
+        </div>
+
+        <div class="card">
+          <h3 class="section-title" style="margin-top:0"><svg class="icon"><use href="#i-megaphone"></use></svg><span data-i18n="mkt.addWatch"></span></h3>
+          <div class="toolbar" style="margin-bottom:6px">
+            <div class="field grow"><label for="mwUrl" data-i18n="mkt.postUrl"></label><input id="mwUrl" class="input mono" type="url" data-i18n-placeholder="mkt.postUrlPh" style="direction:ltr" /></div>
+            <div class="field grow"><label for="mwKeywords" data-i18n="mkt.keywords"></label><input id="mwKeywords" class="input" data-i18n-placeholder="mkt.keywordsPh" /></div>
+          </div>
+          <div class="toolbar" style="margin-bottom:6px">
+            <div class="field grow"><label for="mwLink" data-i18n="mkt.link"></label><input id="mwLink" class="input mono" type="url" data-i18n-placeholder="mkt.linkPh" style="direction:ltr" /></div>
+            <div class="field grow"><label for="mwTemplate" data-i18n="mkt.template"></label><input id="mwTemplate" class="input" data-i18n-placeholder="mkt.templatePh" /></div>
+          </div>
+          <p class="muted" style="font-size:.78rem;margin:0 0 10px" data-i18n="mkt.templateHelp"></p>
+          <div class="btnrow">
+            <button id="mwAddBtn" class="btn primary"><svg class="icon"><use href="#i-check"></use></svg><span data-i18n="mkt.addBtn"></span></button>
+            <button id="mwPollBtn" class="btn"><svg class="icon"><use href="#i-scan"></use></svg><span id="mwPollLabel" data-i18n="mkt.pollNow"></span></button>
+          </div>
+        </div>
+
+        <h3 class="section-title"><svg class="icon"><use href="#i-megaphone"></use></svg><span data-i18n="mkt.watches"></span> <span class="badge green" id="mwCount">0</span></h3>
+        <div id="mwList" class="userlist"></div>
+        <div id="mwEmpty" class="empty-state" hidden><svg class="icon"><use href="#i-megaphone"></use></svg><span data-i18n="mkt.noWatches"></span></div>
+
+        <h3 class="section-title"><svg class="icon"><use href="#i-bell"></use></svg><span data-i18n="mkt.alerts"></span> <span class="badge green" id="maCount">0</span>
+          <span style="flex:1"></span>
+          <button id="maClearDone" class="btn sm ghost"><svg class="icon"><use href="#i-trash"></use></svg><span data-i18n="mkt.clearDone"></span></button>
+        </h3>
+        <div id="maList" class="userlist"></div>
+        <div id="maEmpty" class="empty-state" hidden><svg class="icon"><use href="#i-bell"></use></svg><span data-i18n="mkt.noAlerts"></span></div>
+      </section>
+
+      <!-- ======================= COMMENTING COACH ======================= -->
+      <section class="tab-panel" id="panel-coach" role="tabpanel" aria-labelledby="tab-coach" tabindex="0" hidden>
+        <div class="note">
+          <svg class="icon"><use href="#i-target"></use></svg> <span data-i18n="coach.desc"></span>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-user-minus"></use></svg><span data-i18n="coach.statToday"></span></div><div class="stat-value accent" id="coToday">0</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-target"></use></svg><span data-i18n="coach.statGoal"></span></div><div class="stat-value" id="coGoal">20</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-pulse"></use></svg><span data-i18n="coach.statWeek"></span></div><div class="stat-value" id="coWeek">0</div></div>
+          <div class="stat"><div class="stat-label"><svg class="icon"><use href="#i-heart"></use></svg><span data-i18n="coach.statStreak"></span></div><div class="stat-value" id="coStreak">0</div></div>
+        </div>
+
+        <div class="card">
+          <div class="toolbar" style="margin:0">
+            <div class="field"><label for="coGoalInput" data-i18n="coach.goalLabel"></label><input id="coGoalInput" class="input" type="number" min="5" max="100" value="20" /></div>
+            <button id="coStartBtn" class="btn primary"><svg class="icon"><use href="#i-play"></use></svg><span data-i18n="coach.startBtn"></span></button>
+            <button id="coStopBtn" class="btn danger" hidden><svg class="icon"><use href="#i-stop"></use></svg><span data-i18n="coach.stopBtn"></span></button>
+            <button id="coExploreBtn" class="btn"><svg class="icon"><use href="#i-external"></use></svg><span data-i18n="coach.openExplore"></span></button>
+          </div>
+          <p class="muted" id="coSessionState" style="margin:10px 0 0;font-size:.84rem"></p>
+          <p class="muted" id="coUserHint" style="margin:6px 0 0;font-size:.8rem;color:var(--warn)" data-i18n="coach.hintUsername" hidden></p>
+        </div>
+
+        <!-- ⚡ صف توربو — فقط وب‌مد: آماده‌سازی دسته‌ای؛ ارسال همیشه دستی -->
+        <div class="card" id="turboCard" hidden style="margin-top:14px">
+          <h3 class="section-title" style="margin-top:0"><svg class="icon"><use href="#i-pulse"></use></svg><span data-i18n="turbo.title"></span></h3>
+          <p class="muted" style="font-size:.82rem" data-i18n="turbo.desc"></p>
+          <div class="toolbar" style="margin-bottom:10px">
+            <div class="field"><label for="tuCount" data-i18n="turbo.countLabel"></label><input id="tuCount" class="input" type="number" min="1" max="30" value="10" /></div>
+            <div class="field grow"><label for="tuStyle" data-i18n="turbo.styleLabel"></label>
+              <select id="tuStyle" class="input">
+                <option value="emoji" data-i18n="turbo.styleEmoji"></option>
+                <option value="ai" data-i18n="turbo.styleAi"></option>
+              </select>
+            </div>
+          </div>
+          <div class="field" id="tuEmojiWrap"><label for="tuEmojis" data-i18n="turbo.emojiPoolLabel"></label><input id="tuEmojis" class="input" data-i18n-placeholder="turbo.emojiPoolPh" /></div>
+          <p class="muted" id="tuAiHint" style="font-size:.78rem;color:var(--warn)" hidden></p>
+          <div class="btnrow" style="margin-top:10px">
+            <button id="tuBuild" class="btn primary sm"><svg class="icon"><use href="#i-scan"></use></svg><span data-i18n="turbo.build"></span></button>
+            <button id="tuClear" class="btn danger sm" hidden><svg class="icon"><use href="#i-trash"></use></svg><span data-i18n="turbo.clear"></span></button>
+          </div>
+          <div id="tuProgress" class="note" style="margin-top:10px" hidden><span id="tuProgressText"></span><div class="progress" style="margin-top:8px"><i id="tuProgressBar"></i></div></div>
+          <div id="tuRunner"></div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3 class="section-title" style="margin-top:0"><svg class="icon"><use href="#i-lightbulb"></use></svg><span data-i18n="coach.bankTitle"></span></h3>
+          <p class="muted" style="font-size:.8rem" data-i18n="coach.bankNote"></p>
+          <div class="toolbar" style="margin-bottom:8px">
+            <div class="field grow"><input id="coIdeaInput" class="input" data-i18n-placeholder="coach.addIdeaPh" /></div>
+            <button id="coIdeaAdd" class="btn primary sm"><svg class="icon"><use href="#i-check"></use></svg><span data-i18n="coach.addIdeaBtn"></span></button>
+          </div>
+          <div id="coBankList" class="chips" style="margin-top:4px"></div>
+        </div>
+
+        <h3 class="section-title"><svg class="icon"><use href="#i-clock"></use></svg><span data-i18n="coach.logTitle"></span></h3>
+        <div id="coLogList" class="userlist"></div>
+        <div id="coLogEmpty" class="empty-state" hidden><svg class="icon"><use href="#i-user-minus"></use></svg><span data-i18n="coach.logEmpty"></span></div>
+      </section>
+
+      <!-- ======================= SETTINGS ======================= -->
+      <section class="tab-panel" id="panel-settings" role="tabpanel" aria-labelledby="tab-settings" tabindex="0" hidden>
+
+        <div class="card">
+          <h3><svg class="icon"><use href="#i-gear"></use></svg> <span data-i18n="settings.presetTitle"></span></h3>
+          <div class="preset-cards" id="presetCards"></div>
+
+          <div id="customWrap" hidden>
+            <div class="custom-fields">
+              <div class="field"><label for="cMaxRun" data-i18n="settings.maxPerRun"></label><input id="cMaxRun" class="input" type="number" min="1" max="500" /></div>
+              <div class="field"><label for="cDelayMin" data-i18n="settings.delayMin"></label><input id="cDelayMin" class="input" type="number" min="3" max="3600" /></div>
+              <div class="field"><label for="cDelayMax" data-i18n="settings.delayMax"></label><input id="cDelayMax" class="input" type="number" min="3" max="3600" /></div>
+              <div class="field"><label for="cBatchSize" data-i18n="settings.batchSize"></label><input id="cBatchSize" class="input" type="number" min="1" max="100" /></div>
+              <div class="field"><label for="cPauseMin" data-i18n="settings.batchPauseMin"></label><input id="cPauseMin" class="input" type="number" min="10" max="7200" /></div>
+              <div class="field"><label for="cPauseMax" data-i18n="settings.batchPauseMax"></label><input id="cPauseMax" class="input" type="number" min="10" max="7200" /></div>
+              <div class="field"><label for="cDailyLimit" data-i18n="settings.dailyLimit"></label><input id="cDailyLimit" class="input" type="number" min="1" max="1000" /></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3><svg class="icon"><use href="#i-shield"></use></svg> <span data-i18n="settings.humanTitle"></span></h3>
+          <label class="switch">
+            <input type="checkbox" id="humanMode" />
+            <span class="track"></span>
+            <span class="sw-label" data-i18n="settings.humanTitle"></span>
+          </label>
+          <p class="muted" style="font-size:.84rem" data-i18n="settings.humanDesc"></p>
+          <div class="note warn"><svg class="icon"><use href="#i-warn"></use></svg> <span data-i18n="settings.humanRisk"></span></div>
+        </div>
+
+        <div class="settings-grid" style="margin-top:14px">
+          <!-- کارت دستیار هوش مصنوعی — فقط در نسخهٔ وب لوکال (dashboard.js آن را نمایان می‌کند) -->
+          <div class="card" id="aiCard" hidden>
+            <h3><svg class="icon"><use href="#i-lightbulb"></use></svg> <span data-i18n="ai.cardTitle"></span></h3>
+            <p class="muted" style="font-size:.84rem" data-i18n="ai.cardDesc"></p>
+            <div class="preset-cards" id="aiModeCards" style="margin-bottom:12px"></div>
+            <div class="custom-fields" style="margin-top:0">
+              <div class="field"><label for="aiUrl" data-i18n="ai.urlLabel"></label><input id="aiUrl" class="input mono" style="direction:ltr" placeholder="http://127.0.0.1:11434" spellcheck="false" /></div>
+              <div class="field"><label for="aiModel" data-i18n="ai.modelLabel"></label><select id="aiModel" class="input"></select></div>
+              <div class="field"><label for="aiTone" data-i18n="ai.toneLabel"></label>
+                <select id="aiTone" class="input">
+                  <option value="friendly" data-i18n="ai.tone.friendly"></option>
+                  <option value="pro" data-i18n="ai.tone.pro"></option>
+                  <option value="fun" data-i18n="ai.tone.fun"></option>
+                </select>
+              </div>
+            </div>
+            <div class="btnrow" style="margin-top:10px">
+              <button id="aiTest" class="btn sm"><svg class="icon"><use href="#i-pulse"></use></svg><span id="aiTestLabel" data-i18n="ai.test"></span></button>
+              <button id="aiRefreshModels" class="btn sm ghost"><svg class="icon"><use href="#i-search"></use></svg><span data-i18n="ai.refreshModels"></span></button>
+            </div>
+            <label class="switch" style="margin-top:12px">
+              <input type="checkbox" id="aiAutoClassify" />
+              <span class="track"></span>
+              <span class="sw-label" data-i18n="ai.autoClassify"></span>
+            </label>
+            <p class="muted" id="aiStatusNote" style="font-size:.8rem;margin:8px 0 0"></p>
+            <div class="note" style="margin-top:10px"><svg class="icon"><use href="#i-info"></use></svg> <span data-i18n="ai.setupSteps"></span></div>
+            <div class="note muted" style="margin-top:8px"><svg class="icon"><use href="#i-shield"></use></svg> <span data-i18n="ai.manualOnly"></span></div>
+          </div>
+
+          <div class="card">
+            <h3><svg class="icon"><use href="#i-moon"></use></svg> <span data-i18n="settings.appearance"></span></h3>
+            <div class="field" style="margin-bottom:10px">
+              <label for="sTheme" data-i18n="settings.themeLabel"></label>
+              <select id="sTheme" class="input">
+                <option value="dark" data-i18n="theme.dark"></option>
+                <option value="light" data-i18n="theme.light"></option>
+                <option value="system" data-i18n="theme.system"></option>
+              </select>
+            </div>
+            <div class="field" style="margin-bottom:10px">
+              <label for="sLang" data-i18n="settings.langLabel"></label>
+              <select id="sLang" class="input">
+                <option value="fa">فارسی</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="sIgUsername" data-i18n="settingsExtra.igUsernameLabel"></label>
+              <input id="sIgUsername" class="input mono" style="direction:ltr" data-i18n-placeholder="settingsExtra.igUsernamePh" spellcheck="false" />
+              <span class="muted" style="font-size:.74rem" data-i18n="settingsExtra.igUsernameHelp"></span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3><svg class="icon"><use href="#i-trash"></use></svg> <span data-i18n="settings.dataTitle"></span></h3>
+            <div class="btnrow">
+              <button id="exportAllBtn" class="btn sm"><svg class="icon"><use href="#i-download"></use></svg><span data-i18n="settings.exportAll"></span></button>
+              <button id="importAllBtn" class="btn sm"><svg class="icon"><use href="#i-upload"></use></svg><span data-i18n="settings.importAll"></span></button>
+              <button id="clearDataBtn" class="btn sm danger"><svg class="icon"><use href="#i-trash"></use></svg><span data-i18n="settings.clearData"></span></button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3><svg class="icon"><use href="#i-external"></use></svg> <span data-i18n="settings.linksTitle"></span></h3>
+            <div class="btnrow">
+              <a id="privacyLink" class="btn sm" href="https://github.com/avidkiya" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-shield"></use></svg><span data-i18n="settings.privacy"></span></a>
+              <a id="githubLink" class="btn sm" href="https://github.com/avidkiya" target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-github"></use></svg><span data-i18n="settings.github"></span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================= SUPPORT ======================= -->
+      <section class="tab-panel" id="panel-support" role="tabpanel" aria-labelledby="tab-support" tabindex="0" hidden>
+        <div class="support-hero">
+          <img src="assets/icons/icon-256.png" alt="AvidKiya" width="88" height="88" />
+          <h2>IG Unfollow - AvidKiya</h2>
+          <p class="big" data-i18n="support.text"></p>
+          <p class="muted" data-i18n="support.noAds"></p>
+          <div class="support-links">
+            <a class="support-link" href="https://instagram.com/avidkiya" target="_blank" rel="noopener noreferrer">
+              <svg class="icon"><use href="#i-camera"></use></svg><span data-i18n="support.instagram"></span> <span class="mono">@avidkiya</span>
+            </a>
+            <a class="support-link" href="https://t.me/avidkiya" target="_blank" rel="noopener noreferrer">
+              <svg class="icon"><use href="#i-send"></use></svg><span data-i18n="support.telegram"></span> <span class="mono">@avidkiya</span>
+            </a>
+            <a class="support-link" href="https://x.com/avidkiya" target="_blank" rel="noopener noreferrer">
+              <svg class="icon"><use href="#i-brand-x"></use></svg><span data-i18n="support.x"></span> <span class="mono">@avidkiya</span>
+            </a>
+            <a class="support-link" id="supportGithub" href="https://github.com/avidkiya" target="_blank" rel="noopener noreferrer">
+              <svg class="icon"><use href="#i-github"></use></svg><span data-i18n="support.github"></span> <span class="mono">@avidkiya</span>
+            </a>
+            <a class="support-link" id="supportStar" href="https://github.com/avidkiya" target="_blank" rel="noopener noreferrer" style="border-color:var(--accent)">
+              <svg class="icon"><use href="#i-star"></use></svg><span data-i18n="support.star"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="muted" style="margin-top:36px;font-size:.78rem;text-align:center">
+      <span data-i18n="app.byline"></span> · v4.2.0 · <span data-i18n="support.noAds"></span>
+    </footer>
+  </div>
+
+  <!-- modal root -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" id="modalBox">
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- toasts -->
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- شیم نسخهٔ وب لوکال — در حالت افزونه 404 بی‌خطر است -->
+  <script src="./web-adapter.js" onerror="this.remove()"></script>
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

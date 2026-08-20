@@ -1,0 +1,87 @@
+/* IG TOOLs - AvidKiya — coach overlay (injected on instagram.com) — Liquid Glass */
+
+#igtools-coach-overlay {
+  position: fixed;
+  bottom: 18px;
+  inset-inline-end: 18px;
+  z-index: 2147483646;
+  width: 300px;
+  background: rgba(24, 25, 24, 0.72);
+  color: #f4f6f4;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-top-color: rgba(255, 255, 255, 0.22);
+  border-radius: 22px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset, 0 24px 60px -14px rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  direction: rtl;
+  padding: 13px 15px;
+  font-size: 13px;
+  line-height: 1.7;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+#igtools-coach-overlay.igt-flash {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(33, 241, 168, 0.45), 0 24px 60px -14px rgba(0, 0, 0, 0.65);
+}
+
+#igtools-coach-overlay .igt-hd { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+#igtools-coach-overlay .igt-hd b { font-weight: 700; }
+#igtools-coach-overlay .igt-prog { margin-inline-start: auto; font-weight: 700; color: #21f1a8; font-size: 12px; text-shadow: 0 0 14px rgba(33, 241, 168, 0.5); }
+#igtools-coach-overlay .igt-x {
+  background: transparent; border: none; color: #9a9c98; font-size: 18px; cursor: pointer;
+  line-height: 1; padding: 2px 7px; border-radius: 9px;
+}
+#igtools-coach-overlay .igt-x:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+
+#igtools-coach-overlay .igt-bar {
+  height: 8px; border-radius: 99px;
+  background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden; margin-bottom: 9px;
+}
+#igtools-coach-overlay .igt-bar i {
+  display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, #12c98c, #21f1a8 60%, #8ff5cf);
+  border-radius: 99px; transition: width 0.4s ease;
+  box-shadow: 0 0 14px rgba(33, 241, 168, 0.6);
+}
+#igtools-coach-overlay .igt-bar i.igt-full { background: linear-gradient(90deg, #ffc857, #21f1a8); }
+
+#igtools-coach-overlay .igt-fresh {
+  border: 1px dashed rgba(255, 255, 255, 0.16); border-radius: 12px;
+  padding: 7px 11px; font-size: 11.5px; color: #b9bdb7; margin-bottom: 9px;
+  background: rgba(255, 255, 255, 0.04);
+}
+#igtools-coach-overlay .igt-fresh.igt-ok { border-color: rgba(33, 241, 168, 0.55); color: #21f1a8; background: rgba(33, 241, 168, 0.1); }
+#igtools-coach-overlay .igt-fresh.igt-old { border-color: rgba(255, 200, 87, 0.4); color: #ffc857; background: rgba(255, 200, 87, 0.07); }
+
+#igtools-coach-overlay .igt-idea {
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; padding: 9px 11px; font-size: 12px; min-height: 46px;
+  margin-bottom: 9px; cursor: pointer; transition: border-color 0.15s;
+}
+#igtools-coach-overlay .igt-idea:hover { border-color: rgba(33, 241, 168, 0.5); }
+
+#igtools-coach-overlay .igt-row { display: flex; gap: 8px; margin-bottom: 9px; }
+#igtools-coach-overlay .igt-btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.13);
+  border-top-color: rgba(255, 255, 255, 0.2);
+  color: #f4f6f4; border-radius: 12px; padding: 8px 9px;
+  font-family: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  transition: all 0.15s;
+}
+#igtools-coach-overlay .igt-btn:hover { border-color: #21f1a8; transform: translateY(-1px); }
+#igtools-coach-overlay .igt-btn.igt-copy {
+  background: linear-gradient(160deg, #22e6a4, #12c98c); border-color: transparent;
+  color: #06231a; font-weight: 700;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 8px 22px -8px rgba(33, 241, 168, 0.6);
+}
+
+#igtools-coach-overlay .igt-note { font-size: 10.5px; color: #8a8c88; }
+#igtools-coach-overlay .igt-warn { font-size: 10.5px; color: #ffc857; margin-top: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  #igtools-coach-overlay, #igtools-coach-overlay * { transition: none !important; }
+}

@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "IG TOOLs - AvidKiya",
+  "version": "4.4.1",
+  "description": "Instagram toolbox by Avid Kiya: unfollow manager, comment-marketing alerts (your posts), and a manual engagement coach. 100% local, no automation of posts/DMs — you stay in control.",
+  "author": "Avid Kiya",
+  "minimum_chrome_version": "102",
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "IG TOOLs - AvidKiya",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png",
+      "48": "assets/icons/icon-48.png",
+      "128": "assets/icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs",
+    "alarms",
+    "notifications",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://i.instagram.com/*",
+    "http://127.0.0.1:11434/*",
+    "http://localhost:11434/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "css": ["assets/coach-overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["lib/coach.js", "lib/config.js", "lib/storage.js"],
+      "matches": ["https://www.instagram.com/*"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; img-src 'self' data: https://*.cdninstagram.com https://*.fbcdn.net; font-src 'self'; connect-src https://www.instagram.com https://i.instagram.com"
+  }
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IG TOOLs - AvidKiya — Liquid Glass UI Preview (Dark & Light)</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Preview-only: scoped light theme so both modes render on one page */
+    .preview-light {
+      --bg: #f0ede4; --liquid: #004741; --liquid-deep: #006158; --liquid-ink: #f2efe6;
+      --text: #004741; --text-dim: #355752; --text-faint: #648079;
+      --glass-hi: rgba(255,255,255,.75); --glass-head: rgba(255,255,255,.9);
+      --glass-fill: rgba(255,255,255,.42); --glass-fill-2: rgba(255,255,255,.62);
+      --glass-fill-strong: rgba(253,252,246,.78);
+      --glass-border: rgba(0,71,65,.16); --glass-border-soft: rgba(0,71,65,.1);
+      --glass-accent-border: rgba(0,71,65,.3); --glass-accent-dim: rgba(0,71,65,.07);
+      --glass-input: rgba(255,255,255,.65);
+      --danger: #b3261e; --danger-dim: rgba(179,38,30,.08);
+      --warn: #8a5a00; --warn-dim: rgba(138,90,0,.09); --info: #0b5394;
+      --shadow-1: 0 1px 0 rgba(255,255,255,.7) inset, 0 16px 38px -14px rgba(0,71,65,.22);
+      --shadow-pop: 0 1px 0 rgba(255,255,255,.8) inset, 0 26px 64px -18px rgba(0,71,65,.3);
+      --glow-liquid: 0 0 0 1px var(--glass-accent-border), 0 8px 26px -8px rgba(0,71,65,.35);
+      --focus-ring: 0 0 0 3px rgba(0,71,65,.25);
+      background: #f0ede4; color: #004741;
+    }
+    .preview-frame {
+      position: relative; overflow: hidden;
+      border: 1px solid var(--glass-border-soft); border-radius: 26px;
+      margin: 18px 0 40px; box-shadow: var(--shadow-pop);
+    }
+    .preview-frame .frame-aurora {
+      position: absolute; inset: -20%; z-index: 0; pointer-events: none;
+      background:
+        radial-gradient(38% 32% at 82% 12%, var(--aurora-1) 0%, transparent 70%),
+        radial-gradient(46% 40% at 12% 88%, var(--aurora-2) 0%, transparent 72%),
+        radial-gradient(30% 26% at 18% 14%, var(--aurora-3) 0%, transparent 70%);
+    }
+    .preview-light .frame-aurora {
+      --aurora-1: rgba(0,71,65,.13); --aurora-2: rgba(198,216,178,.75); --aurora-3: rgba(0,122,105,.1);
+    }
+    .mock-body { position: relative; z-index: 1; padding: 20px 22px 28px; }
+    .preview-label { display: flex; align-items: center; gap: 10px; margin: 30px 0 10px; font-weight: 700; }
+    .preview-label code {
+      font-size: .78rem; background: var(--glass-accent-dim); border: 1px solid var(--glass-accent-border);
+      border-radius: 999px; padding: 3px 12px;
+    }
+    .coach-widget {
+      border-radius: 22px; padding: 13px 15px; max-width: 320px; margin-inline-start: auto;
+      background: rgba(24,25,24,.72); color: #f4f6f4;
+      border: 1px solid rgba(255,255,255,.13); border-top-color: rgba(255,255,255,.22);
+      -webkit-backdrop-filter: blur(22px) saturate(150%); backdrop-filter: blur(22px) saturate(150%);
+      box-shadow: 0 1px 0 rgba(255,255,255,.12) inset, 0 24px 60px -14px rgba(0,0,0,.65);
+      font-size: 12.5px; direction: rtl;
+    }
+    .coach-widget .cw-hd { display:flex; gap:8px; align-items:center; margin-bottom:7px; }
+    .coach-widget .cw-fresh { border:1px dashed rgba(33,241,168,.55); color:#21f1a8; background:rgba(33,241,168,.1); border-radius:12px; padding:6px 10px; margin:7px 0; font-size:11.5px; }
+    .coach-widget .cw-idea { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:8px 10px; font-size:11.5px; margin-bottom:8px; }
+    .coach-widget .cw-note { font-size:10px; color:#8a8c88; }
+  </style>
+</head>
+<body>
+<div class="app">
+  <h1 style="margin:18px 0 4px">IG TOOLs - AvidKiya — پیش‌نمایش Liquid Glass</h1>
+  <p class="muted">سیستم طراحی نسخهٔ ۴: سطوح نیمه‌شفاف، بلر و شکست نور روی پس‌زمینهٔ Aurora، درخشش لبه‌ها و درخشان‌سازی تعاملی — در هر دو تم. (بدون نصب افزونه، فونت Vazirmatn محلی)</p>
+
+  <!-- ======================= DARK ======================= -->
+  <div class="preview-label">🌙 Dark Liquid <code>#171717 · #21F1A8</code></div>
+  <div class="preview-frame" style="background:#171717">
+    <div class="frame-aurora" style="--aurora-1:rgba(33,241,168,.16);--aurora-2:rgba(18,90,70,.5);--aurora-3:rgba(120,90,220,.07)"></div>
+    <div class="mock-body">
+      <div class="topbar" style="position:static">
+        <div class="brand">
+          <img class="brand-logo" src="../assets/icons/icon-128.png" alt="logo" />
+          <div><h1>IG TOOLs - AvidKiya</h1><p class="tagline">جعبه‌ابزار اینستاگرام — انفالوور · کامنت مارکتینگ · کامنت کوچ</p></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="gselect" style="min-width:170px">
+          <button class="gselect-btn open" type="button"><span class="gs-label">فارسی</span><svg class="icon gs-chev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></button>
+          <ul class="gselect-list" role="listbox">
+            <li role="option" aria-selected="true">فارسی</li>
+            <li role="option" aria-selected="false">English</li>
+          </ul>
+        </div>
+        <button class="btn icon-only">🌙</button>
+      </div>
+      <div class="tabs" style="overflow:visible">
+        <button class="tab-btn" aria-selected="true">▦ داشبورد</button>
+        <button class="tab-btn" aria-selected="false">👤 فالوبک‌نکرده‌ها</button>
+        <button class="tab-btn" aria-selected="false">📣 کامنت مارکتینگ</button>
+        <button class="tab-btn" aria-selected="false">🎯 کامنت‌گذاری</button>
+      </div>
+      <div class="stats-grid">
+        <div class="stat"><div class="stat-label">👥 فالووینگ</div><div class="stat-value">۱٬۴۸۲</div></div>
+        <div class="stat"><div class="stat-label">✅ فالوئر</div><div class="stat-value">۲٬۰۳۹</div></div>
+        <div class="stat"><div class="stat-label">➖ فالوبک نکرده</div><div class="stat-value accent">۳۱۲</div></div>
+        <div class="stat"><div class="stat-label">🎯 کامنت امروز</div><div class="stat-value">۱۴ / ۲۰</div></div>
+        <div class="stat"><div class="stat-label">🔥 روزهای پیاپی</div><div class="stat-value">۶</div></div>
+        <div class="stat"><div class="stat-label">🔔 هشدار جدید</div><div class="stat-value accent">۳</div></div>
+      </div>
+      <div class="card">
+        <h3>اسکن در حال انجام</h3>
+        <div class="stepper">
+          <span class="step done"><i class="dot"></i>خواندن فالووینگ</span>
+          <span class="step active"><i class="dot"></i>خواندن فالوئرها</span>
+          <span class="step"><i class="dot"></i>مقایسه</span>
+        </div>
+        <div class="progress"><i style="width:64%"></i></div>
+        <div class="scan-counters">
+          <div class="sc"><div class="k">صفحه‌ها</div><div class="v">۱۲</div></div>
+          <div class="sc"><div class="k">فالووینگ</div><div class="v">۱٬۴۸۲</div></div>
+          <div class="sc"><div class="k">فالوئر</div><div class="v">۱٬۷۶۵</div></div>
+          <div class="sc"><div class="k">موقت</div><div class="v">۳۰۴</div></div>
+        </div>
+        <div class="btnrow" style="margin-top:14px">
+          <button class="btn primary">✦ شروع اسکن</button>
+          <button class="btn">⏸ مکث</button>
+          <button class="btn danger">■ لغو</button>
+        </div>
+      </div>
+      <div class="userlist" style="margin-top:16px">
+        <div class="urow selected">
+          <input type="checkbox" class="u-check" checked />
+          <span class="avatar"><span class="avatar-fallback" style="display:flex;background:#7c5cd6">MH</span></span>
+          <div class="u-main"><div class="u-name"><span class="mono">@mh.design</span> <span class="badge green">✓ تأییدشده</span></div><div class="u-sub">Mohammad H.</div></div>
+          <div class="u-cell"><b>۲٬۴۱۰</b><br><span class="muted" style="font-size:.72rem">فالوئر</span></div>
+          <div class="u-cell"><b>۸۹۰</b><br><span class="muted" style="font-size:.72rem">فالووینگ</span></div>
+          <div class="u-cell"><span class="badge">عمومی</span></div>
+          <div class="btnrow" style="gap:2px"><button class="iconbtn on">★</button><button class="iconbtn lock">🔒</button></div>
+        </div>
+        <div class="urow" style="grid-template-columns:auto 1fr auto">
+          <span class="avatar"><span class="avatar-fallback" style="display:flex;background:#d6895c">KA</span></span>
+          <div class="u-main"><div class="u-name"><span class="mono">@keyword.fan</span> <span class="badge green">«آموزش»</span> <span class="badge amber">جدید</span></div><div class="u-sub">سلام، آموزشش رو می‌فرستی؟ 🙏</div></div>
+          <div class="btnrow" style="gap:6px;flex-wrap:wrap">
+            <button class="btn sm">مشاهده کامنت</button>
+            <button class="btn sm primary">✉ پیش‌نویس دایرکت</button>
+          </div>
+        </div>
+      </div>
+      <div class="actions-bar">
+        <span>۲۴ انتخاب شده</span><div class="vr"></div>
+        <button class="btn primary">➖ شروع آنفالو (۲۴)</button>
+        <button class="btn ghost sm">لغو انتخاب</button>
+      </div>
+      <div class="coach-widget" style="margin-top:20px">
+        <div class="cw-hd">🧠 <b>کامنت کوچ</b> <span style="margin-inline-start:auto;color:#21f1a8;font-weight:700">۱۴/۲۰</span></div>
+        <div class="progress" style="margin:6px 0"><i style="width:70%"></i></div>
+        <div class="cw-fresh">🔥 تازه (۲ ساعت پیش) — بهترین زمان برای کامنت!</div>
+        <div class="cw-idea">«من امسال همین رو امتحان کردم؛ تنها نکته‌ش اینه که صبر می‌خواد…»</div>
+        <div class="cw-note">کامنت را خودت بنویس و بفرست ✋</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= LIGHT ======================= -->
+  <div class="preview-label">☀️ Light Liquid <code>#F0EDE4 · #004741</code></div>
+  <div class="preview-frame preview-light">
+    <div class="frame-aurora"></div>
+    <div class="mock-body">
+      <div class="topbar" style="position:static">
+        <div class="brand">
+          <img class="brand-logo" src="../assets/icons/icon-128.png" alt="logo" />
+          <div><h1>IG TOOLs - AvidKiya</h1><p class="tagline">Instagram toolbox — unfollower · comment marketing · coach</p></div>
+        </div>
+        <div class="spacer"></div>
+        <button class="btn icon-only">☀️</button>
+      </div>
+      <div class="tabs" style="overflow:visible">
+        <button class="tab-btn" aria-selected="true">▦ Dashboard</button>
+        <button class="tab-btn" aria-selected="false">👤 Non-followers</button>
+        <button class="tab-btn" aria-selected="false">📣 Marketing</button>
+        <button class="tab-btn" aria-selected="false">🎯 Coach</button>
+      </div>
+      <div class="stats-grid">
+        <div class="stat"><div class="stat-label">👥 Following</div><div class="stat-value">1,482</div></div>
+        <div class="stat"><div class="stat-label">✅ Followers</div><div class="stat-value">2,039</div></div>
+        <div class="stat"><div class="stat-label">➖ Not back</div><div class="stat-value accent">312</div></div>
+        <div class="stat"><div class="stat-label">🎯 Comments today</div><div class="stat-value">14 / 20</div></div>
+        <div class="stat"><div class="stat-label">🔥 Streak</div><div class="stat-value">6</div></div>
+        <div class="stat"><div class="stat-label">🔔 New alerts</div><div class="stat-value accent">3</div></div>
+      </div>
+      <div class="card">
+        <h3>Scanning</h3>
+        <div class="stepper">
+          <span class="step done"><i class="dot"></i>Reading following</span>
+          <span class="step active"><i class="dot"></i>Reading followers</span>
+          <span class="step"><i class="dot"></i>Comparing</span>
+        </div>
+        <div class="progress"><i style="width:64%"></i></div>
+        <div class="scan-counters">
+          <div class="sc"><div class="k">Pages</div><div class="v">12</div></div>
+          <div class="sc"><div class="k">Following</div><div class="v">1,482</div></div>
+          <div class="sc"><div class="k">Followers</div><div class="v">1,765</div></div>
+          <div class="sc"><div class="k">Temp NF</div><div class="v">304</div></div>
+        </div>
+        <div class="btnrow" style="margin-top:14px">
+          <button class="btn primary">✦ Start scan</button>
+          <button class="btn">⏸ Pause</button>
+          <button class="btn danger">■ Cancel</button>
+        </div>
+      </div>
+      <div class="userlist" style="margin-top:16px">
+        <div class="urow selected">
+          <input type="checkbox" class="u-check" checked />
+          <span class="avatar"><span class="avatar-fallback" style="display:flex;background:#7c5cd6">MH</span></span>
+          <div class="u-main"><div class="u-name"><span class="mono">@mh.design</span> <span class="badge green">✓ Verified</span></div><div class="u-sub">Mohammad H.</div></div>
+          <div class="u-cell"><b>2,410</b><br><span class="muted" style="font-size:.72rem">Followers</span></div>
+          <div class="u-cell"><b>890</b><br><span class="muted" style="font-size:.72rem">Following</span></div>
+          <div class="u-cell"><span class="badge">Public</span></div>
+          <div class="btnrow" style="gap:2px"><button class="iconbtn on">★</button><button class="iconbtn lock">🔒</button></div>
+        </div>
+      </div>
+      <div class="actions-bar">
+        <span>24 selected</span><div class="vr"></div>
+        <button class="btn primary">➖ Start unfollow (24)</button>
+        <button class="btn ghost sm">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="muted" style="text-align:center">ساخته‌شده توسط Avid Kiya (@avidkiya) · Liquid Glass UI · MIT License</p>
+</div>
+</body>
+</html>
